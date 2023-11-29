@@ -12,6 +12,9 @@
 		02698B1B2B170F6B00D067C2 /* StaffTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02698B1A2B170F6B00D067C2 /* StaffTableViewController.swift */; };
 		02698B1D2B170F7900D067C2 /* StudentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02698B1C2B170F7900D067C2 /* StudentsTableViewController.swift */; };
 		02698B1F2B170F9700D067C2 /* SpellTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02698B1E2B170F9700D067C2 /* SpellTableViewController.swift */; };
+		02698B212B171C8700D067C2 /* UserActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02698B202B171C8700D067C2 /* UserActionCell.swift */; };
+		02698B232B17327E00D067C2 /* StaffDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02698B222B17327E00D067C2 /* StaffDetailViewController.swift */; };
+		02698B252B1735BB00D067C2 /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02698B242B1735BB00D067C2 /* PersonCell.swift */; };
 		029F9EBB2B16FE2F00425E3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029F9EBA2B16FE2F00425E3D /* AppDelegate.swift */; };
 		029F9EBD2B16FE2F00425E3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029F9EBC2B16FE2F00425E3D /* SceneDelegate.swift */; };
 		029F9EC22B16FE2F00425E3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 029F9EC02B16FE2F00425E3D /* Main.storyboard */; };
@@ -25,6 +28,9 @@
 		02698B1A2B170F6B00D067C2 /* StaffTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffTableViewController.swift; sourceTree = "<group>"; };
 		02698B1C2B170F7900D067C2 /* StudentsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsTableViewController.swift; sourceTree = "<group>"; };
 		02698B1E2B170F9700D067C2 /* SpellTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellTableViewController.swift; sourceTree = "<group>"; };
+		02698B202B171C8700D067C2 /* UserActionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserActionCell.swift; sourceTree = "<group>"; };
+		02698B222B17327E00D067C2 /* StaffDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffDetailViewController.swift; sourceTree = "<group>"; };
+		02698B242B1735BB00D067C2 /* PersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
 		029F9EB72B16FE2F00425E3D /* WizardWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WizardWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		029F9EBA2B16FE2F00425E3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		029F9EBC2B16FE2F00425E3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +106,7 @@
 				02698B1A2B170F6B00D067C2 /* StaffTableViewController.swift */,
 				02698B1C2B170F7900D067C2 /* StudentsTableViewController.swift */,
 				02698B1E2B170F9700D067C2 /* SpellTableViewController.swift */,
+				02698B222B17327E00D067C2 /* StaffDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -107,6 +114,8 @@
 		029F9ED12B16FF2800425E3D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				02698B202B171C8700D067C2 /* UserActionCell.swift */,
+				02698B242B1735BB00D067C2 /* PersonCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -182,10 +191,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02698B232B17327E00D067C2 /* StaffDetailViewController.swift in Sources */,
 				02698B172B170F2E00D067C2 /* FirstViewController.swift in Sources */,
 				02698B1B2B170F6B00D067C2 /* StaffTableViewController.swift in Sources */,
 				02698B1F2B170F9700D067C2 /* SpellTableViewController.swift in Sources */,
 				02698B192B170F5500D067C2 /* MainCollectionViewController.swift in Sources */,
+				02698B212B171C8700D067C2 /* UserActionCell.swift in Sources */,
+				02698B252B1735BB00D067C2 /* PersonCell.swift in Sources */,
 				02698B1D2B170F7900D067C2 /* StudentsTableViewController.swift in Sources */,
 				029F9EBB2B16FE2F00425E3D /* AppDelegate.swift in Sources */,
 				029F9EBD2B16FE2F00425E3D /* SceneDelegate.swift in Sources */,
