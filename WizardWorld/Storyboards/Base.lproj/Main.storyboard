@@ -17,29 +17,50 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="spellCell" textLabel="hCv-nB-Thx" detailTextLabel="5YN-MG-cN1" style="IBUITableViewCellStyleSubtitle" id="OPu-lt-QjL" customClass="SpellCell" customModule="WizardWorld" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="50" width="375" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="spellCell" rowHeight="66" id="OPu-lt-QjL" customClass="CustomSpellViewCell" customModule="WizardWorld" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="375" height="66"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OPu-lt-QjL" id="E5J-Vh-rPO" customClass="SpellCell" customModule="WizardWorld" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OPu-lt-QjL" id="E5J-Vh-rPO">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="66"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Spell: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hCv-nB-Thx">
-                                            <rect key="frame" x="16" y="6" width="35" height="14.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
-                                            <nil key="textColor"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mei-2s-tp7">
+                                            <rect key="frame" x="16" y="8" width="343" height="25"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="Spell:">
+                                                    <attributes>
+                                                        <font key="NSFont" size="16" name="Papyrus"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Description:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5YN-MG-cN1">
-                                            <rect key="frame" x="16" y="22.5" width="68.5" height="14.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
-                                            <nil key="textColor"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BfE-i0-Z5C">
+                                            <rect key="frame" x="16" y="30" width="359" height="30"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="Description:">
+                                                    <attributes>
+                                                        <font key="NSFont" size="16" name="Papyrus"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="BfE-i0-Z5C" firstAttribute="trailing" secondItem="E5J-Vh-rPO" secondAttribute="trailingMargin" constant="16" id="1zB-Hv-URV"/>
+                                        <constraint firstItem="mei-2s-tp7" firstAttribute="leading" secondItem="E5J-Vh-rPO" secondAttribute="leading" constant="16" id="4Q6-yj-gCL"/>
+                                        <constraint firstItem="BfE-i0-Z5C" firstAttribute="leading" secondItem="E5J-Vh-rPO" secondAttribute="leadingMargin" id="8O3-6u-Np7"/>
+                                        <constraint firstItem="BfE-i0-Z5C" firstAttribute="top" secondItem="E5J-Vh-rPO" secondAttribute="topMargin" constant="19" id="a7O-HD-Wgk"/>
+                                        <constraint firstItem="BfE-i0-Z5C" firstAttribute="bottom" secondItem="E5J-Vh-rPO" secondAttribute="bottomMargin" constant="5" id="bjN-gN-CO9"/>
+                                        <constraint firstItem="mei-2s-tp7" firstAttribute="top" secondItem="E5J-Vh-rPO" secondAttribute="top" constant="8" id="pts-MN-AJg"/>
+                                        <constraint firstAttribute="trailing" secondItem="mei-2s-tp7" secondAttribute="trailing" constant="16" id="sED-uk-RWt"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="descriptionLabel" destination="BfE-i0-Z5C" id="9LQ-Nc-0sR"/>
+                                    <outlet property="spellLabel" destination="mei-2s-tp7" id="g0p-aj-nGc"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -74,7 +95,7 @@
                             </connections>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="wizardCell" rowHeight="100" id="4bV-IL-izI" customClass="CustomPersonCell" customModule="WizardWorld" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="wizardCell" rowHeight="100" id="4bV-IL-izI" customClass="CustomPersonViewCell" customModule="WizardWorld" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="106" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4bV-IL-izI" id="KiF-pp-MYG">
@@ -85,47 +106,45 @@
                                             <rect key="frame" x="10" y="10" width="100" height="80"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="100" id="0fW-hv-6Q4"/>
-                                                <constraint firstAttribute="height" constant="100" id="95n-27-DUi"/>
                                             </constraints>
                                         </imageView>
                                         <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Ked-Wd-pph">
                                             <rect key="frame" x="50" y="40" width="20" height="20"/>
                                         </activityIndicatorView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full name:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O8Y-DL-VBt">
-                                            <rect key="frame" x="121" y="11" width="70.5" height="16"/>
-                                            <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="16"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full name: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="O8Y-DL-VBt">
+                                            <rect key="frame" x="116" y="14" width="254" height="25"/>
+                                            <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="16"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="House:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6CU-hy-5bM">
-                                            <rect key="frame" x="121" y="53" width="42" height="14"/>
-                                            <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="14"/>
+                                            <rect key="frame" x="116" y="43" width="45" height="22"/>
+                                            <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="14"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Actor: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hag-qB-RCV">
-                                            <rect key="frame" x="121" y="75" width="41" height="14"/>
-                                            <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="14"/>
+                                            <rect key="frame" x="116" y="67" width="43.5" height="22"/>
+                                            <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="14"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="Ked-Wd-pph" firstAttribute="centerY" secondItem="KiF-pp-MYG" secondAttribute="centerY" id="1Sk-2E-6gw"/>
-                                        <constraint firstItem="6CU-hy-5bM" firstAttribute="top" secondItem="O8Y-DL-VBt" secondAttribute="bottom" constant="26" id="2dH-Wl-mGd"/>
+                                        <constraint firstItem="O8Y-DL-VBt" firstAttribute="top" secondItem="KiF-pp-MYG" secondAttribute="top" constant="14" id="4Lc-Ha-uUq"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="Hag-qB-RCV" secondAttribute="bottom" id="8GS-yK-ZGN"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="Ked-Wd-pph" secondAttribute="bottom" constant="29" id="C64-5Q-Amm"/>
-                                        <constraint firstItem="Hag-qB-RCV" firstAttribute="top" secondItem="6CU-hy-5bM" secondAttribute="bottom" constant="8" id="DuQ-Dx-zMn"/>
-                                        <constraint firstItem="O8Y-DL-VBt" firstAttribute="leading" secondItem="KiF-pp-MYG" secondAttribute="leadingMargin" constant="105" id="Eey-vA-4Tr"/>
+                                        <constraint firstItem="Hag-qB-RCV" firstAttribute="top" secondItem="6CU-hy-5bM" secondAttribute="bottom" constant="2" id="DuQ-Dx-zMn"/>
+                                        <constraint firstItem="O8Y-DL-VBt" firstAttribute="leading" secondItem="KiF-pp-MYG" secondAttribute="leadingMargin" constant="100" id="Eey-vA-4Tr"/>
                                         <constraint firstAttribute="bottom" secondItem="T2Q-Rr-9Ow" secondAttribute="bottom" constant="10" id="PRA-fw-Or2"/>
-                                        <constraint firstItem="6CU-hy-5bM" firstAttribute="leading" secondItem="KiF-pp-MYG" secondAttribute="leadingMargin" constant="105" id="QdO-Bk-O5K"/>
-                                        <constraint firstItem="O8Y-DL-VBt" firstAttribute="top" secondItem="KiF-pp-MYG" secondAttribute="topMargin" id="Xu0-WA-XrI"/>
+                                        <constraint firstItem="6CU-hy-5bM" firstAttribute="leading" secondItem="KiF-pp-MYG" secondAttribute="leadingMargin" constant="100" id="QdO-Bk-O5K"/>
                                         <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="6CU-hy-5bM" secondAttribute="trailing" id="bAS-ZS-U09"/>
                                         <constraint firstItem="T2Q-Rr-9Ow" firstAttribute="top" secondItem="KiF-pp-MYG" secondAttribute="top" constant="10" id="d30-34-mit"/>
                                         <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="Hag-qB-RCV" secondAttribute="trailing" id="g84-T2-ASs"/>
                                         <constraint firstItem="Ked-Wd-pph" firstAttribute="centerX" secondItem="T2Q-Rr-9Ow" secondAttribute="centerX" id="j9y-2K-uZu"/>
-                                        <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="O8Y-DL-VBt" secondAttribute="trailing" id="pt5-fA-01V"/>
-                                        <constraint firstItem="Hag-qB-RCV" firstAttribute="leading" secondItem="KiF-pp-MYG" secondAttribute="leadingMargin" constant="105" id="vgq-Ci-xXy"/>
+                                        <constraint firstAttribute="trailing" secondItem="O8Y-DL-VBt" secondAttribute="trailing" constant="5" id="sIO-mX-Qgj"/>
+                                        <constraint firstItem="Hag-qB-RCV" firstAttribute="leading" secondItem="KiF-pp-MYG" secondAttribute="leadingMargin" constant="100" id="vgq-Ci-xXy"/>
                                         <constraint firstItem="Ked-Wd-pph" firstAttribute="top" secondItem="KiF-pp-MYG" secondAttribute="topMargin" constant="29" id="xTn-cX-gJz"/>
                                         <constraint firstItem="T2Q-Rr-9Ow" firstAttribute="leading" secondItem="KiF-pp-MYG" secondAttribute="leading" constant="10" id="y1F-Bc-X0z"/>
                                     </constraints>
@@ -262,7 +281,7 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Hogwarts staff">
-                                    <fontDescription key="titleFontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="29"/>
+                                    <fontDescription key="titleFontDescription" name="Papyrus" family="Papyrus" pointSize="29"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="goToStaffButton:" destination="sSE-QZ-SYO" eventType="touchUpInside" id="8ey-n3-UAO"/>
@@ -277,7 +296,7 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Hogwarts students">
-                                    <fontDescription key="titleFontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="29"/>
+                                    <fontDescription key="titleFontDescription" name="Papyrus" family="Papyrus" pointSize="29"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="goToStudentsButton:" destination="sSE-QZ-SYO" eventType="touchUpInside" id="L1n-A3-uEh"/>
@@ -292,7 +311,7 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Wizards spells">
-                                    <fontDescription key="titleFontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="29"/>
+                                    <fontDescription key="titleFontDescription" name="Papyrus" family="Papyrus" pointSize="29"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="goToSpellsButton:" destination="sSE-QZ-SYO" eventType="touchUpInside" id="lHu-2u-M0O"/>

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CustomPersonCell: UITableViewCell {
+class CustomPersonViewCell: UITableViewCell {
     
     @IBOutlet var personImage: UIImageView!
     @IBOutlet var personFullName: UILabel!

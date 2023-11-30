@@ -35,7 +35,7 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func goToSpellsButton(_ sender: UIButton) {
-        
+        performSegue(withIdentifier: "spells", sender: nil)
     }
     
     //to apply Shadow
