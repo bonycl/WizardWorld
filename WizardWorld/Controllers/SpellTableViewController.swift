@@ -62,10 +62,10 @@ class SpellTableViewController: UITableViewController {
         URLSession.shared.dataTask(with: url) { (data, _, error) in
             
             guard let data = data else { return }
-            print("DEBUG 65 data: \(data)")
+            print("DEBUG 65 spell data: \(data)")
             
             if let error = error {
-                print("DEBUG 68 error: \(error)")
+                print("DEBUG 68 spell error: \(error)")
             }
             
             do {
