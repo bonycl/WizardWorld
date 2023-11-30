@@ -8,22 +8,16 @@
 import Foundation
 
 struct HogwartsStaff: Decodable {
-    var name: String?
-    var gender: String?
-    var house: String?
-    var dateOfBirth: String?
-    var ancestry: String?
-    var wandWood: String?
-    var wandCore: String?
-    var wandLength: String?
-    var patronus: String?
-    var actor: String?
-    var imageUrl: String?
+    let name: String?
+    let gender: String?
+    let house: String?
+    let dateOfBirth: String?
+    let ancestry: String?
+    let species: String?
+    
+    let patronus: String?
+    let actor: String?
+    let image: String?
 
 }
-//struct House {
-//    var gryffindor: String?
-//   var slytherin: String?
-//   var hufflepuff: String?
-//   var ravenclaw: String?
-//}
+

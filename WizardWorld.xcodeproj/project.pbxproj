@@ -11,7 +11,7 @@
 		02698B1B2B170F6B00D067C2 /* PeopleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02698B1A2B170F6B00D067C2 /* PeopleTableViewController.swift */; };
 		02698B1F2B170F9700D067C2 /* SpellTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02698B1E2B170F9700D067C2 /* SpellTableViewController.swift */; };
 		02698B232B17327E00D067C2 /* StaffDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02698B222B17327E00D067C2 /* StaffDetailViewController.swift */; };
-		02698B252B1735BB00D067C2 /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02698B242B1735BB00D067C2 /* PersonCell.swift */; };
+		02698B252B1735BB00D067C2 /* CustomPersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02698B242B1735BB00D067C2 /* CustomPersonCell.swift */; };
 		02698B272B17398500D067C2 /* SpellCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02698B262B17398500D067C2 /* SpellCell.swift */; };
 		02698B292B17626000D067C2 /* Extention + MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02698B282B17626000D067C2 /* Extention + MainVC.swift */; };
 		02698B2C2B176BD500D067C2 /* Wizards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02698B2B2B176BD500D067C2 /* Wizards.swift */; };
@@ -27,7 +27,7 @@
 		02698B1A2B170F6B00D067C2 /* PeopleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleTableViewController.swift; sourceTree = "<group>"; };
 		02698B1E2B170F9700D067C2 /* SpellTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellTableViewController.swift; sourceTree = "<group>"; };
 		02698B222B17327E00D067C2 /* StaffDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffDetailViewController.swift; sourceTree = "<group>"; };
-		02698B242B1735BB00D067C2 /* PersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
+		02698B242B1735BB00D067C2 /* CustomPersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPersonCell.swift; sourceTree = "<group>"; };
 		02698B262B17398500D067C2 /* SpellCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellCell.swift; sourceTree = "<group>"; };
 		02698B282B17626000D067C2 /* Extention + MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extention + MainVC.swift"; sourceTree = "<group>"; };
 		02698B2B2B176BD500D067C2 /* Wizards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wizards.swift; sourceTree = "<group>"; };
@@ -121,7 +121,7 @@
 		029F9ED12B16FF2800425E3D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				02698B242B1735BB00D067C2 /* PersonCell.swift */,
+				02698B242B1735BB00D067C2 /* CustomPersonCell.swift */,
 				02698B262B17398500D067C2 /* SpellCell.swift */,
 				02698B2B2B176BD500D067C2 /* Wizards.swift */,
 			);
@@ -204,7 +204,7 @@
 				02698B292B17626000D067C2 /* Extention + MainVC.swift in Sources */,
 				02698B1F2B170F9700D067C2 /* SpellTableViewController.swift in Sources */,
 				02698B192B170F5500D067C2 /* MainViewController.swift in Sources */,
-				02698B252B1735BB00D067C2 /* PersonCell.swift in Sources */,
+				02698B252B1735BB00D067C2 /* CustomPersonCell.swift in Sources */,
 				029F9EBB2B16FE2F00425E3D /* AppDelegate.swift in Sources */,
 				02698B2C2B176BD500D067C2 /* Wizards.swift in Sources */,
 				02698B272B17398500D067C2 /* SpellCell.swift in Sources */,

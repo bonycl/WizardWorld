@@ -74,7 +74,7 @@
                             </connections>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="wizardCell" rowHeight="100" id="4bV-IL-izI" customClass="PersonCell" customModule="WizardWorld" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="wizardCell" rowHeight="100" id="4bV-IL-izI" customClass="CustomPersonCell" customModule="WizardWorld" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="106" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4bV-IL-izI" id="KiF-pp-MYG">
@@ -82,28 +82,29 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="T2Q-Rr-9Ow">
-                                            <rect key="frame" x="10" y="0.0" width="100" height="100"/>
+                                            <rect key="frame" x="10" y="10" width="100" height="80"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="100" id="0fW-hv-6Q4"/>
+                                                <constraint firstAttribute="height" constant="100" id="95n-27-DUi"/>
                                             </constraints>
                                         </imageView>
                                         <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Ked-Wd-pph">
                                             <rect key="frame" x="50" y="40" width="20" height="20"/>
                                         </activityIndicatorView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full name:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O8Y-DL-VBt">
-                                            <rect key="frame" x="118" y="11" width="231" height="16"/>
+                                            <rect key="frame" x="121" y="11" width="70.5" height="16"/>
                                             <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="16"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="House:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6CU-hy-5bM">
-                                            <rect key="frame" x="118" y="53" width="226" height="14"/>
+                                            <rect key="frame" x="121" y="53" width="42" height="14"/>
                                             <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="14"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Actor: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hag-qB-RCV">
-                                            <rect key="frame" x="118" y="75" width="226" height="14"/>
+                                            <rect key="frame" x="121" y="75" width="41" height="14"/>
                                             <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="14"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -111,19 +112,20 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="Ked-Wd-pph" firstAttribute="centerY" secondItem="KiF-pp-MYG" secondAttribute="centerY" id="1Sk-2E-6gw"/>
-                                        <constraint firstItem="6CU-hy-5bM" firstAttribute="leading" secondItem="T2Q-Rr-9Ow" secondAttribute="trailing" constant="8" symbolic="YES" id="67P-jV-qPb"/>
+                                        <constraint firstItem="6CU-hy-5bM" firstAttribute="top" secondItem="O8Y-DL-VBt" secondAttribute="bottom" constant="26" id="2dH-Wl-mGd"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="Hag-qB-RCV" secondAttribute="bottom" id="8GS-yK-ZGN"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="Ked-Wd-pph" secondAttribute="bottom" constant="29" id="C64-5Q-Amm"/>
                                         <constraint firstItem="Hag-qB-RCV" firstAttribute="top" secondItem="6CU-hy-5bM" secondAttribute="bottom" constant="8" id="DuQ-Dx-zMn"/>
-                                        <constraint firstAttribute="bottom" secondItem="T2Q-Rr-9Ow" secondAttribute="bottom" id="PRA-fw-Or2"/>
-                                        <constraint firstItem="O8Y-DL-VBt" firstAttribute="leading" secondItem="T2Q-Rr-9Ow" secondAttribute="trailing" constant="8" id="TcL-K4-vBM"/>
+                                        <constraint firstItem="O8Y-DL-VBt" firstAttribute="leading" secondItem="KiF-pp-MYG" secondAttribute="leadingMargin" constant="105" id="Eey-vA-4Tr"/>
+                                        <constraint firstAttribute="bottom" secondItem="T2Q-Rr-9Ow" secondAttribute="bottom" constant="10" id="PRA-fw-Or2"/>
+                                        <constraint firstItem="6CU-hy-5bM" firstAttribute="leading" secondItem="KiF-pp-MYG" secondAttribute="leadingMargin" constant="105" id="QdO-Bk-O5K"/>
                                         <constraint firstItem="O8Y-DL-VBt" firstAttribute="top" secondItem="KiF-pp-MYG" secondAttribute="topMargin" id="Xu0-WA-XrI"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="6CU-hy-5bM" secondAttribute="trailing" constant="15" id="bAS-ZS-U09"/>
-                                        <constraint firstItem="T2Q-Rr-9Ow" firstAttribute="top" secondItem="KiF-pp-MYG" secondAttribute="top" id="d30-34-mit"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="Hag-qB-RCV" secondAttribute="trailing" constant="15" id="g84-T2-ASs"/>
+                                        <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="6CU-hy-5bM" secondAttribute="trailing" id="bAS-ZS-U09"/>
+                                        <constraint firstItem="T2Q-Rr-9Ow" firstAttribute="top" secondItem="KiF-pp-MYG" secondAttribute="top" constant="10" id="d30-34-mit"/>
+                                        <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="Hag-qB-RCV" secondAttribute="trailing" id="g84-T2-ASs"/>
                                         <constraint firstItem="Ked-Wd-pph" firstAttribute="centerX" secondItem="T2Q-Rr-9Ow" secondAttribute="centerX" id="j9y-2K-uZu"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="O8Y-DL-VBt" secondAttribute="trailing" constant="10" id="pt5-fA-01V"/>
-                                        <constraint firstItem="Hag-qB-RCV" firstAttribute="leading" secondItem="T2Q-Rr-9Ow" secondAttribute="trailing" constant="8" symbolic="YES" id="vBB-Da-9cN"/>
+                                        <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="O8Y-DL-VBt" secondAttribute="trailing" id="pt5-fA-01V"/>
+                                        <constraint firstItem="Hag-qB-RCV" firstAttribute="leading" secondItem="KiF-pp-MYG" secondAttribute="leadingMargin" constant="105" id="vgq-Ci-xXy"/>
                                         <constraint firstItem="Ked-Wd-pph" firstAttribute="top" secondItem="KiF-pp-MYG" secondAttribute="topMargin" constant="29" id="xTn-cX-gJz"/>
                                         <constraint firstItem="T2Q-Rr-9Ow" firstAttribute="leading" secondItem="KiF-pp-MYG" secondAttribute="leading" constant="10" id="y1F-Bc-X0z"/>
                                     </constraints>
@@ -166,7 +168,7 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="nf6-xa-BVG">
-                                <rect key="frame" x="16" y="353" width="343" height="242"/>
+                                <rect key="frame" x="16" y="382" width="343" height="192"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eN0-dW-rpf">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="17"/>
@@ -198,32 +200,20 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wand wood: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HrC-Dy-bV6">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Species:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HrC-Dy-bV6">
                                         <rect key="frame" x="0.0" y="127" width="343" height="15"/>
                                         <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wand core: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wuC-fG-afL">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Patronus: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hCf-Vt-I1I">
                                         <rect key="frame" x="0.0" y="152" width="343" height="15"/>
                                         <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wand length: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jQm-8j-Hzr">
-                                        <rect key="frame" x="0.0" y="177" width="343" height="15"/>
-                                        <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="15"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Patronus: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hCf-Vt-I1I">
-                                        <rect key="frame" x="0.0" y="202" width="343" height="15"/>
-                                        <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="15"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Actor: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lV9-es-CUw">
-                                        <rect key="frame" x="0.0" y="227" width="343" height="15"/>
+                                        <rect key="frame" x="0.0" y="177" width="343" height="15"/>
                                         <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -238,14 +228,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="okL-1z-DKB" firstAttribute="top" secondItem="B4v-Lz-NTS" secondAttribute="topMargin" constant="130" id="2Eh-eE-NTo"/>
-                            <constraint firstItem="nf6-xa-BVG" firstAttribute="top" secondItem="okL-1z-DKB" secondAttribute="bottom" constant="139" id="2qg-3i-pBg"/>
                             <constraint firstItem="1Xc-4w-Iqj" firstAttribute="top" secondItem="zn4-dU-zO9" secondAttribute="top" constant="8" id="CLJ-qI-EJb"/>
                             <constraint firstItem="okL-1z-DKB" firstAttribute="leading" secondItem="zn4-dU-zO9" secondAttribute="leading" constant="177" id="Fb0-TI-m9x"/>
                             <constraint firstItem="1Xc-4w-Iqj" firstAttribute="leading" secondItem="zn4-dU-zO9" secondAttribute="leading" constant="90" id="GHa-px-Fkr"/>
                             <constraint firstItem="zn4-dU-zO9" firstAttribute="trailing" secondItem="nf6-xa-BVG" secondAttribute="trailing" constant="16" id="YhY-2u-tFi"/>
                             <constraint firstItem="zn4-dU-zO9" firstAttribute="trailing" secondItem="okL-1z-DKB" secondAttribute="trailing" constant="178" id="k8n-jm-7nw"/>
                             <constraint firstItem="zn4-dU-zO9" firstAttribute="trailing" secondItem="1Xc-4w-Iqj" secondAttribute="trailing" constant="90" id="rGV-GC-12v"/>
-                            <constraint firstItem="nf6-xa-BVG" firstAttribute="top" secondItem="1Xc-4w-Iqj" secondAttribute="bottom" constant="16" id="vGD-UH-qfZ"/>
+                            <constraint firstItem="nf6-xa-BVG" firstAttribute="top" secondItem="1Xc-4w-Iqj" secondAttribute="bottom" constant="45" id="vGD-UH-qfZ"/>
+                            <constraint firstItem="nf6-xa-BVG" firstAttribute="top" secondItem="okL-1z-DKB" secondAttribute="bottom" constant="168" id="vg1-H9-DyD"/>
                             <constraint firstItem="nf6-xa-BVG" firstAttribute="leading" secondItem="zn4-dU-zO9" secondAttribute="leading" constant="16" id="wIt-x9-4kg"/>
                         </constraints>
                     </view>
@@ -325,6 +315,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="z49-kj-oDs"/>
                     <connections>
+                        <outlet property="hogwartsStaff" destination="Fgb-Jt-85Z" id="IHX-xn-HzV"/>
+                        <outlet property="hogwartsStudents" destination="qiN-Tn-cMG" id="Efl-l5-JYF"/>
+                        <outlet property="wizardSpells" destination="Hhp-Rj-EAk" id="wx3-zF-ghU"/>
                         <segue destination="XNZ-Wb-lnL" kind="show" identifier="spells" id="Hb9-4D-3UU"/>
                         <segue destination="aTT-vE-VJc" kind="show" identifier="teachers" id="Qz0-pY-h8y"/>
                     </connections>
