@@ -10,10 +10,10 @@
 		02698B192B170F5500D067C2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02698B182B170F5500D067C2 /* MainViewController.swift */; };
 		02698B1B2B170F6B00D067C2 /* PeopleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02698B1A2B170F6B00D067C2 /* PeopleTableViewController.swift */; };
 		02698B1F2B170F9700D067C2 /* SpellTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02698B1E2B170F9700D067C2 /* SpellTableViewController.swift */; };
-		02698B232B17327E00D067C2 /* StaffDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02698B222B17327E00D067C2 /* StaffDetailViewController.swift */; };
+		02698B232B17327E00D067C2 /* WizardDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02698B222B17327E00D067C2 /* WizardDetailViewController.swift */; };
 		02698B252B1735BB00D067C2 /* CustomPersonViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02698B242B1735BB00D067C2 /* CustomPersonViewCell.swift */; };
 		02698B272B17398500D067C2 /* CustomSpellViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02698B262B17398500D067C2 /* CustomSpellViewCell.swift */; };
-		02698B292B17626000D067C2 /* Extention + MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02698B282B17626000D067C2 /* Extention + MainVC.swift */; };
+		02698B292B17626000D067C2 /* Extention + peopleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02698B282B17626000D067C2 /* Extention + peopleVC.swift */; };
 		02698B2C2B176BD500D067C2 /* Wizards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02698B2B2B176BD500D067C2 /* Wizards.swift */; };
 		02698B2E2B18709500D067C2 /* Spells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02698B2D2B18709500D067C2 /* Spells.swift */; };
 		029F9EBB2B16FE2F00425E3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029F9EBA2B16FE2F00425E3D /* AppDelegate.swift */; };
@@ -27,10 +27,10 @@
 		02698B182B170F5500D067C2 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		02698B1A2B170F6B00D067C2 /* PeopleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleTableViewController.swift; sourceTree = "<group>"; };
 		02698B1E2B170F9700D067C2 /* SpellTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellTableViewController.swift; sourceTree = "<group>"; };
-		02698B222B17327E00D067C2 /* StaffDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffDetailViewController.swift; sourceTree = "<group>"; };
+		02698B222B17327E00D067C2 /* WizardDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WizardDetailViewController.swift; sourceTree = "<group>"; };
 		02698B242B1735BB00D067C2 /* CustomPersonViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPersonViewCell.swift; sourceTree = "<group>"; };
 		02698B262B17398500D067C2 /* CustomSpellViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSpellViewCell.swift; sourceTree = "<group>"; };
-		02698B282B17626000D067C2 /* Extention + MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extention + MainVC.swift"; sourceTree = "<group>"; };
+		02698B282B17626000D067C2 /* Extention + peopleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extention + peopleVC.swift"; sourceTree = "<group>"; };
 		02698B2B2B176BD500D067C2 /* Wizards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wizards.swift; sourceTree = "<group>"; };
 		02698B2D2B18709500D067C2 /* Spells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spells.swift; sourceTree = "<group>"; };
 		029F9EB72B16FE2F00425E3D /* WizardWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WizardWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,7 +56,7 @@
 		02698B2A2B17626700D067C2 /* Extentions */ = {
 			isa = PBXGroup;
 			children = (
-				02698B282B17626000D067C2 /* Extention + MainVC.swift */,
+				02698B282B17626000D067C2 /* Extention + peopleVC.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -114,7 +114,7 @@
 			children = (
 				02698B182B170F5500D067C2 /* MainViewController.swift */,
 				02698B1A2B170F6B00D067C2 /* PeopleTableViewController.swift */,
-				02698B222B17327E00D067C2 /* StaffDetailViewController.swift */,
+				02698B222B17327E00D067C2 /* WizardDetailViewController.swift */,
 				02698B1E2B170F9700D067C2 /* SpellTableViewController.swift */,
 			);
 			path = Controllers;
@@ -202,10 +202,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02698B232B17327E00D067C2 /* StaffDetailViewController.swift in Sources */,
+				02698B232B17327E00D067C2 /* WizardDetailViewController.swift in Sources */,
 				02698B1B2B170F6B00D067C2 /* PeopleTableViewController.swift in Sources */,
 				02698B2E2B18709500D067C2 /* Spells.swift in Sources */,
-				02698B292B17626000D067C2 /* Extention + MainVC.swift in Sources */,
+				02698B292B17626000D067C2 /* Extention + peopleVC.swift in Sources */,
 				02698B1F2B170F9700D067C2 /* SpellTableViewController.swift in Sources */,
 				02698B192B170F5500D067C2 /* MainViewController.swift in Sources */,
 				02698B252B1735BB00D067C2 /* CustomPersonViewCell.swift in Sources */,

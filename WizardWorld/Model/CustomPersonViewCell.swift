@@ -26,5 +26,12 @@ class CustomPersonViewCell: UITableViewCell {
         personImage.contentMode = .scaleAspectFit
         personImage.backgroundColor = UIColor.white
         
+        //shadow on image
+        personImage.layer.shadowOpacity = 0.4
+        personImage.layer.shadowRadius = 3.0
+        personImage.layer.borderColor = UIColor.black.withAlphaComponent(0.25).cgColor
+        personImage.layer.shadowOffset = CGSize(width: 0, height: 5)
+        personImage.layer.shadowColor = UIColor.black.cgColor
+        
     }
 }
