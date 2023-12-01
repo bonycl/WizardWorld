@@ -12,7 +12,15 @@ class PeopleTableViewController: UITableViewController {
     
     var url: String!
     var wizards: [HogwartsPeople] = []
-   private var sortedWizards = [HogwartsPeople]()
+    var filteredWizards = [HogwartsPeople]()
+    
+    var searchBarIsEmpty: Bool {
+        guard let text = searchController.searchBar.text else { return false }
+        return text.isEmpty
+    }
+    var isFiltering: Bool {
+        return searchController.isActive && !searchBarIsEmpty
+    }
     
     //при поиске сам VC будет отображать сортировку не другой VC
     let searchController = UISearchController(searchResultsController: nil)
@@ -20,7 +28,7 @@ class PeopleTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       
+        
         setupSearchController()
         fetchPersonData()
         tableView.reloadData()
@@ -33,20 +41,29 @@ class PeopleTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return wizards.count
-    }
+       
+        if isFiltering {
+            return filteredWizards.count
+        }
+            return wizards.count
+        }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "wizardCell", for: indexPath) as! CustomPersonViewCell
         
-        let wizard = wizards[indexPath.row]
+        var wizard: HogwartsPeople
+        
+        if isFiltering {
+            wizard = filteredWizards[indexPath.row]
+        } else {
+            wizard = wizards[indexPath.row]
+        }
         // print("DEBUG 38 \(wizard)")
         //настройка ячейки
         cell.activityIndicator.isHidden = false
         cell.activityIndicator.startAnimating()
         
-        cell.personFullName.text = "Full name: \(wizard.name ?? "not known")"
+        cell.personFullName.text = "Full name: \(wizard.name )"
         cell.personHouse.text = "House: \(wizard.house ?? "not known")"
         cell.personActor.text = "Actor: \(wizard.actor ?? "not known")"
         
@@ -93,20 +110,27 @@ class PeopleTableViewController: UITableViewController {
     
     
     
-     // MARK: - Navigation
-     
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     
-         if segue.identifier == "showDetails" {
-             
-             if let indexPath = tableView.indexPathForSelectedRow {
-                 let selectedWizard = wizards[indexPath.row]
-                 
-             let detailVC = segue.destination as! WizardDetailViewController
-                 detailVC.wizardDetails = selectedWizard
-             }
-         }
-     }
-
+    // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "showDetails" {
+            
+            if let indexPath = tableView.indexPathForSelectedRow {
+                
+                let selectedWizard: HogwartsPeople
+                
+                if isFiltering {
+                     selectedWizard = filteredWizards[indexPath.row]
+                } else {
+                     selectedWizard = wizards[indexPath.row]
+                }
+                
+                let detailVC = segue.destination as! WizardDetailViewController
+                detailVC.wizardDetails = selectedWizard
+            }
+        }
+    }
+    
     
 }

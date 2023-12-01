@@ -33,7 +33,7 @@ class WizardDetailViewController: UIViewController {
     
     func setupUI() {
         if let wizardDetail = wizardDetails {
-            name.text = "Name: \(wizardDetail.name ?? "")"
+            name.text = "Name: \(wizardDetail.name)"
             gender.text = "Gender: \(wizardDetail.gender ?? "")"
             house.text = "House: \(wizardDetail.house ?? "")"
             dateOfBirth.text = "Date of birth: \(wizardDetail.dateOfBirth ?? "")"

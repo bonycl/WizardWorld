@@ -8,7 +8,7 @@
 import Foundation
 
 struct HogwartsPeople: Decodable {
-    let name: String?
+    let name: String
     let gender: String?
     let house: String?
     let dateOfBirth: String?

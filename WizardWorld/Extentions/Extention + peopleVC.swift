@@ -8,26 +8,32 @@ extension PeopleTableViewController: UISearchResultsUpdating {
     
     
      func setupSearchController() {
-        //получатель информации об изменении текста - булет наш класс
+        //получатель информации об изменении текста - будет наш класс
         searchController.searchResultsUpdater = self
         //параметр дает возможность взаимодействовать с отфильтрованными данными
         searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "Search"
+        searchController.searchBar.placeholder = "search by name"
+         searchController.searchBar.isHidden = false
+         
         navigationItem.searchController = searchController
         //отпуск строки поиска при переходе на другой экран
         definesPresentationContext = true
+         
+         navigationItem.hidesSearchBarWhenScrolling = false
     }
     
+    func filterContentForSearchText(_ searchText: String) {
+        
+        filteredWizards = wizards.filter({ (wizard: HogwartsPeople) in
+            return wizard.name.lowercased().contains(searchText.lowercased())
+        })
+        tableView.reloadData()
+    }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    func updateSearchResults(for searchController: UISearchController) {
+        filterContentForSearchText(searchController.searchBar.text!)
+    }
+   
     
     //MARK: - Fetch data
     func fetchPersonData() {
@@ -59,9 +65,6 @@ extension PeopleTableViewController: UISearchResultsUpdating {
         }.resume()
     }
     
-    func updateSearchResults(for searchController: UISearchController) {
-        
-    }
     
     
 }
