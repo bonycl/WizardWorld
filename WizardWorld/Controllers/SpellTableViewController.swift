@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class SpellTableViewController: UITableViewController {
     
@@ -16,7 +17,7 @@ class SpellTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-      fetchSpellData()
+        fetchDataViaAlamofire()
     
     }
 
@@ -35,8 +36,8 @@ class SpellTableViewController: UITableViewController {
       //  print("DEBUG 38 \(spell)")
         
         //настройка ячейки
-        cell.spellLabel.text = "Spell: \(spell.name)"
-        cell.descriptionLabel.text = "Description: \(spell.description)"
+        cell.spellLabel.text = "Spell: \(spell.name ?? "not known")"
+        cell.descriptionLabel.text = "Description: \(spell.description ?? "not known")"
     
         return cell
     }
@@ -50,31 +51,48 @@ class SpellTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    func fetchSpellData() {
-        
-        
+//    func fetchSpellData() {
+//        
+//        
+//        guard let url = URL(string: url) else { return }
+//        
+//        URLSession.shared.dataTask(with: url) { (data, _, error) in
+//            
+//            guard let data = data else { return }
+//            print("DEBUG 65 spell data: \(data)")
+//            
+//            if let error = error {
+//                print("DEBUG 68 spell error: \(error)")
+//            }
+//            
+//            do {
+//                self.spells = try JSONDecoder().decode([Spells].self, from: data)
+//                
+//                print("DEBUG: total spells - \(self.spells.count)")
+//
+//                DispatchQueue.main.async {
+//                    self.tableView.reloadData()
+//                }
+//            } catch let error {
+//                print("Decoder Error from spells Data: \(error)")
+//            }
+//        }.resume()
+//    }
+    
+    func fetchDataViaAlamofire() {
         guard let url = URL(string: url) else { return }
         
-        URLSession.shared.dataTask(with: url) { (data, _, error) in
+        AF.request(url).validate().responseJSON { dataResponse in
             
-            guard let data = data else { return }
-            print("DEBUG 65 spell data: \(data)")
-            
-            if let error = error {
-                print("DEBUG 68 spell error: \(error)")
-            }
-            
-            do {
-                self.spells = try JSONDecoder().decode([Spells].self, from: data)
-                
-                print("DEBUG: total spells - \(self.spells.count)")
-
+            switch dataResponse.result {
+            case .success(let value):
+                self.spells = Spells.getSpells(from: value)
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
-            } catch let error {
-                print("Decoder Error from spells Data: \(error)")
-            }
-        }.resume()
+            case .failure(let error):
+                print(error)
+            } 
+        }
     }
 }

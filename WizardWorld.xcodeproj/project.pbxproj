@@ -21,6 +21,7 @@
 		029F9EC22B16FE2F00425E3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 029F9EC02B16FE2F00425E3D /* Main.storyboard */; };
 		029F9EC42B16FE3100425E3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 029F9EC32B16FE3100425E3D /* Assets.xcassets */; };
 		029F9EC72B16FE3100425E3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 029F9EC52B16FE3100425E3D /* LaunchScreen.storyboard */; };
+		034FA6AD85757BA27888300B /* Pods_WizardWorld.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B60F26CD3E5455E108F0BA57 /* Pods_WizardWorld.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,9 @@
 		029F9EC32B16FE3100425E3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		029F9EC62B16FE3100425E3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		029F9EC82B16FE3100425E3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A6564A30D6F670A9084EA5E1 /* Pods-WizardWorld.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WizardWorld.release.xcconfig"; path = "Target Support Files/Pods-WizardWorld/Pods-WizardWorld.release.xcconfig"; sourceTree = "<group>"; };
+		B60F26CD3E5455E108F0BA57 /* Pods_WizardWorld.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WizardWorld.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8D299A75B7C1C0FD2F8AE9A /* Pods-WizardWorld.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WizardWorld.debug.xcconfig"; path = "Target Support Files/Pods-WizardWorld/Pods-WizardWorld.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				034FA6AD85757BA27888300B /* Pods_WizardWorld.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +71,8 @@
 			children = (
 				029F9EB92B16FE2F00425E3D /* WizardWorld */,
 				029F9EB82B16FE2F00425E3D /* Products */,
+				049187BE991452C898422BE3 /* Pods */,
+				52672B3AF29D2663DE4E4C3D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -131,6 +138,23 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		049187BE991452C898422BE3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B8D299A75B7C1C0FD2F8AE9A /* Pods-WizardWorld.debug.xcconfig */,
+				A6564A30D6F670A9084EA5E1 /* Pods-WizardWorld.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		52672B3AF29D2663DE4E4C3D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B60F26CD3E5455E108F0BA57 /* Pods_WizardWorld.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +162,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 029F9ECB2B16FE3100425E3D /* Build configuration list for PBXNativeTarget "WizardWorld" */;
 			buildPhases = (
+				B1C151667ECB194DA06D59C8 /* [CP] Check Pods Manifest.lock */,
 				029F9EB32B16FE2F00425E3D /* Sources */,
 				029F9EB42B16FE2F00425E3D /* Frameworks */,
 				029F9EB52B16FE2F00425E3D /* Resources */,
+				3886961D4B112BAFF079C40C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -196,6 +222,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3886961D4B112BAFF079C40C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WizardWorld/Pods-WizardWorld-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WizardWorld/Pods-WizardWorld-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WizardWorld/Pods-WizardWorld-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B1C151667ECB194DA06D59C8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WizardWorld-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		029F9EB32B16FE2F00425E3D /* Sources */ = {
@@ -275,7 +343,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -338,7 +406,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -359,6 +427,7 @@
 		};
 		029F9ECC2B16FE3100425E3D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8D299A75B7C1C0FD2F8AE9A /* Pods-WizardWorld.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -387,6 +456,7 @@
 		};
 		029F9ECD2B16FE3100425E3D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6564A30D6F670A9084EA5E1 /* Pods-WizardWorld.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
