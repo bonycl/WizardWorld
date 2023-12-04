@@ -25,6 +25,7 @@ class WizardDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        overrideUserInterfaceStyle = .light
         view.backgroundColor = #colorLiteral(red: 0.8857646585, green: 0.8026774526, blue: 0.6788902283, alpha: 1)
         activityIndicator.isHidden = false
         activityIndicator.startAnimating()

@@ -18,6 +18,7 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        overrideUserInterfaceStyle = .light
         setupBackground()
        
         setupUI(button: hogwartsStaff)

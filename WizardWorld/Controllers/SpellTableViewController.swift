@@ -17,6 +17,7 @@ class SpellTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        overrideUserInterfaceStyle = .light
         fetchDataViaAlamofire()
     
     }
